@@ -28,13 +28,14 @@ mujeeb-portfolio/
 
 No JavaScript is involved in layout switching. Pure CSS `@media` queries handle everything:
 
-| Breakpoint      | Layout                                      |
-|-----------------|---------------------------------------------|
-| `> 768px`       | 2:1 CSS grid — intro left, content right    |
-| `769px–1024px`  | Same grid, tighter padding (tablet)         |
-| `≤ 768px`       | Fixed topbar + hamburger drawer + hero      |
+| Breakpoint     | Layout                                   |
+| -------------- | ---------------------------------------- |
+| `> 768px`      | 2:1 CSS grid — intro left, content right |
+| `769px–1024px` | Same grid, tighter padding (tablet)      |
+| `≤ 768px`      | Fixed topbar + hamburger drawer + hero   |
 
 Elements exclusive to one layout are hidden with `display: none !important` on the other:
+
 - `.topbar`, `.mobile-drawer`, `.mobile-hero` → hidden on desktop
 - `.left-panel`, `.desktop-nav` → hidden on mobile
 
@@ -72,6 +73,7 @@ Then: **vercel.com → New Project → Import repo → Deploy**
 No framework, no build command — Vercel auto-detects static.
 
 Or via CLI:
+
 ```bash
 npm i -g vercel && vercel --prod
 ```
@@ -83,21 +85,22 @@ npm i -g vercel && vercel --prod
 Replace the demo block in `assets/js/app.js` with your real handler.
 
 **Formspree (recommended — free, no backend):**
+
 1. Sign up at [formspree.io](https://formspree.io) → create a form → copy your form ID
 2. In `app.js`, replace the demo block with:
 
 ```js
-fetch('https://formspree.io/f/YOUR_FORM_ID', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+fetch("https://formspree.io/f/YOUR_FORM_ID", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ name, email, message }),
 })
-.then((res) => {
-  if (!res.ok) throw new Error();
-  setFormStatus('Message sent! I will be in touch soon.', 'success');
-  contactForm.reset();
-})
-.catch(() => setFormStatus('Something went wrong. Try again.', 'error'));
+  .then((res) => {
+    if (!res.ok) throw new Error();
+    setFormStatus("Message sent! I will be in touch soon.", "success");
+    contactForm.reset();
+  })
+  .catch(() => setFormStatus("Something went wrong. Try again.", "error"));
 ```
 
 ---
@@ -105,7 +108,7 @@ fetch('https://formspree.io/f/YOUR_FORM_ID', {
 ## Browser Support
 
 | Browser | Min version |
-|---------|-------------|
+| ------- | ----------- |
 | Chrome  | 90+         |
 | Firefox | 88+         |
 | Safari  | 14+         |
@@ -113,4 +116,4 @@ fetch('https://formspree.io/f/YOUR_FORM_ID', {
 
 ---
 
-© 2025 Mujeeb Shaik. All rights reserved.
+© 2026 Mujeeb Shaik. All rights reserved.

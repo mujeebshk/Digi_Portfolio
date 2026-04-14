@@ -1,0 +1,358 @@
+/* ============================================================
+   DESKTOP.CSS — Layout and styles specific to index.html
+   The 2:1 grid layout, left fixed panel, right scrollable panel
+   ============================================================ */
+
+html, body {
+  height:   100%;
+  overflow: hidden;
+}
+
+/* ── 2:1 GRID LAYOUT ── */
+.layout {
+  display:               grid;
+  grid-template-columns: 2fr 1fr;
+  height:                100vh;
+  width:                 100vw;
+  position:              relative;
+  z-index:               1;
+  overflow:              hidden;
+}
+
+/* ════════════════════════════════
+   LEFT PANEL · 2fr · Intro fixed
+════════════════════════════════ */
+.left-panel {
+  height:             100vh;
+  display:            flex;
+  flex-direction:     column;
+  justify-content:    space-between;
+  padding:            56px 72px 48px 64px;
+  border-right:       1px solid var(--glass-border);
+  background:         rgba(8, 8, 8, 0.65);
+  backdrop-filter:    blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  position:           relative;
+  overflow:           hidden;
+}
+
+/* Glowing right-edge separator */
+.left-panel::after {
+  content: '';
+  position:   absolute;
+  top: 0; right: 0;
+  width: 1px; height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 25%,
+    rgba(255, 255, 255, 0.14) 75%,
+    transparent 100%
+  );
+}
+
+/* Decorative watermark initial */
+.left-panel::before {
+  content:        'M';
+  position:       absolute;
+  bottom:         -60px;
+  right:          40px;
+  font-family:    var(--font-serif);
+  font-size:      440px;
+  font-weight:    700;
+  color:          rgba(255, 255, 255, 0.016);
+  line-height:    1;
+  pointer-events: none;
+  user-select:    none;
+}
+
+/* ── INTRO BLOCK (vertically centred) ── */
+.intro-block {
+  flex:            1;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  position:        relative;
+  z-index:         1;
+}
+
+.tag-line {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  letter-spacing: 0.24em;
+  color:          var(--gray-600);
+  text-transform: uppercase;
+  margin-bottom:  32px;
+  display:        flex;
+  align-items:    center;
+  gap:            12px;
+}
+.tag-line::before {
+  content:     '';
+  display:     inline-block;
+  width:       28px;
+  height:      1px;
+  background:  var(--gray-600);
+  flex-shrink: 0;
+}
+
+.name-first {
+  font-family:    var(--font-serif);
+  font-size:      clamp(80px, 9vw, 130px);
+  font-weight:    300;
+  line-height:    0.88;
+  letter-spacing: -0.03em;
+  color:          var(--white);
+  font-style:     italic;
+}
+
+.name-last {
+  font-family:    var(--font-serif);
+  font-size:      clamp(80px, 9vw, 130px);
+  font-weight:    700;
+  line-height:    0.88;
+  letter-spacing: -0.03em;
+  color:          var(--white);
+  margin-bottom:  40px;
+}
+
+.title-row {
+  display:       flex;
+  align-items:   center;
+  gap:           16px;
+  margin-bottom: 28px;
+}
+
+.title-badge {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  letter-spacing: 0.16em;
+  color:          var(--gray-400);
+  border:         1px solid var(--glass-border);
+  padding:        7px 16px;
+  border-radius:  2px;
+  text-transform: uppercase;
+  background:     var(--glass-bg);
+  backdrop-filter: blur(8px);
+}
+
+.avail-dot {
+  display:        flex;
+  align-items:    center;
+  gap:            7px;
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--gray-600);
+  letter-spacing: 0.1em;
+}
+.avail-dot::before {
+  content:      '';
+  width:        7px;
+  height:       7px;
+  background:   #4ade80;
+  border-radius: 50%;
+  box-shadow:   0 0 0 3px rgba(74, 222, 128, 0.18);
+  flex-shrink:  0;
+}
+
+.intro-desc {
+  font-size:     14px;
+  line-height:   1.85;
+  color:         var(--gray-400);
+  max-width:     480px;
+  margin-bottom: 48px;
+}
+
+/* ── STATS ROW ── */
+.stats-row {
+  display:         flex;
+  border:          1px solid var(--glass-border);
+  border-radius:   4px;
+  overflow:        hidden;
+  background:      var(--glass-bg);
+  backdrop-filter: blur(12px);
+  max-width:       360px;
+  margin-bottom:   52px;
+}
+
+.stat-item {
+  flex:         1;
+  padding:      18px 20px;
+  border-right: 1px solid var(--glass-border);
+  position:     relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.stat-num {
+  font-family:   var(--font-serif);
+  font-size:     34px;
+  font-weight:   600;
+  color:         var(--white);
+  line-height:   1;
+  margin-bottom: 4px;
+}
+.stat-lbl {
+  font-size:      10px;
+  color:          var(--gray-600);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── NAVIGATION ── */
+.nav-section {
+  position: relative;
+  z-index:  1;
+}
+
+.nav-list {
+  list-style:  none;
+  display:     flex;
+  flex-wrap:   wrap;
+  gap:         0;
+  margin-bottom: 24px;
+}
+
+.nav-list li button {
+  background:     none;
+  border:         none;
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--gray-600);
+  padding:        8px 16px 8px 0;
+  transition:     color var(--transition-fast);
+}
+.nav-list li button::after {
+  content:      '/';
+  margin-left:  14px;
+  color:        var(--gray-800);
+}
+.nav-list li:last-child button::after { display: none; }
+.nav-list li button:hover,
+.nav-list li button.active { color: var(--white); }
+
+.left-footer {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--gray-600);
+  letter-spacing: 0.08em;
+  line-height:    1.8;
+}
+.left-footer a { color: var(--gray-600); }
+.left-footer a:hover { color: var(--white); }
+
+/* ════════════════════════════════
+   RIGHT PANEL · 1fr · Scrollable
+════════════════════════════════ */
+.right-panel {
+  height:      100vh;
+  overflow-y:  auto;
+  overflow-x:  hidden;
+  background:  rgba(10, 10, 10, 0.45);
+  backdrop-filter:    blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── SECTIONS ── */
+.section {
+  display:        none;
+  min-height:     100vh;
+  padding:        48px 32px 56px;
+  flex-direction: column;
+  animation:      fadeUp 0.42s ease forwards;
+}
+.section.active { display: flex; }
+
+/* ── INTRO SECTION ── */
+.intro-headline {
+  font-family:    var(--font-serif);
+  font-size:      clamp(26px, 2.8vw, 38px);
+  font-weight:    300;
+  line-height:    1.1;
+  letter-spacing: -0.02em;
+  color:          var(--white);
+  margin-bottom:  16px;
+}
+.intro-headline em { font-style: italic; color: var(--gray-200); }
+
+.body-text {
+  font-size:     12px;
+  line-height:   1.85;
+  color:         var(--gray-400);
+  margin-bottom: 20px;
+}
+
+/* ── GOALS GRID ── */
+.goals-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   10px;
+  flex-shrink:           0;
+}
+
+.goal-item {
+  background:    var(--glass-bg);
+  border:        1px solid var(--glass-border);
+  padding:       18px 16px;
+  border-radius: 4px;
+  position:      relative;
+  overflow:      hidden;
+}
+.goal-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* ── CONTACT ── */
+.contact-info-row {
+  display:        flex;
+  flex-direction: column;
+  gap:            12px;
+  margin-bottom:  20px;
+  flex-shrink:    0;
+}
+.contact-info-label {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom:  2px;
+}
+.contact-info-val { font-size: 12px; color: var(--white); font-weight: 500; }
+.contact-info-val a { color: var(--gray-400); }
+.contact-info-val a:hover { color: var(--white); }
+
+.contact-form {
+  display:        flex;
+  flex-direction: column;
+  gap:            11px;
+  flex-shrink:    0;
+}
+
+.btn-send {
+  align-self: flex-start;
+}
+
+.section-footer {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--gray-600);
+  letter-spacing: 0.07em;
+  line-height:    1.9;
+  margin-top:     auto;
+  padding-top:    24px;
+  border-top:     1px solid var(--glass-border);
+  flex-shrink:    0;
+}

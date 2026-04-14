@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Mujeeb Shaik — Front-End Developer portfolio. Building modern, responsive web applications. Based in Bengaluru, India."
+    />
+    <meta
+      name="keywords"
+      content="Mujeeb Shaik, Front-End Developer, React, SvelteKit, AWS, Terraform, Bengaluru"
+    />
+    <meta name="author" content="Mujeeb Shaik" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mujeeb Shaik — Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Building modern, responsive web applications. Cloud & DevOps learner. Based in Bengaluru, India."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mujeebshaik.vercel.app/mobile.html"
+    />
+
+    <title>Mujeeb Shaik — Front-End Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/mobile.css" />
+  </head>
+  <body>
+    <!-- ══ TOP BAR ══ -->
+    <header class="topbar" role="banner">
+      <div class="topbar-logo"><em>M.</em>Shaik</div>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="drawer"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- ══ DRAWER NAV ══ -->
+    <nav
+      class="drawer"
+      id="drawer"
+      aria-label="Portfolio sections"
+      aria-hidden="true"
+    >
+      <ul class="drawer-nav" role="tablist">
+        <li role="presentation">
+          <button
+            role="tab"
+            aria-selected="true"
+            data-section="intro"
+            class="active"
+          >
+            Intro <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="education">
+            Education <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="experience">
+            Experience <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="interests">
+            Interests <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="projects">
+            Projects <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="goals">
+            Goals <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+        <li role="presentation">
+          <button role="tab" aria-selected="false" data-section="contact">
+            Contact <span class="arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main" id="app">
+      <!-- ══ HERO (always visible) ══ -->
+      <section class="hero" aria-label="Hero introduction">
+        <p class="hero-tag">Portfolio &middot; 2026</p>
+        <div class="hero-name" aria-label="Mujeeb"><em>Mujeeb</em></div>
+        <div class="hero-name-last">Shaik</div>
+        <div class="hero-badge">
+          <span class="hero-dot" aria-hidden="true"></span>Open to Work
+        </div>
+        <p class="hero-desc">
+          Front-End Developer based in Bengaluru. Building modern, responsive
+          web apps with a passion for clean design and emerging cloud tech.
+        </p>
+        <div class="hero-stats" aria-label="Quick stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">3+</div>
+            <div class="hero-stat-lbl">Years</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">14</div>
+            <div class="hero-stat-lbl">Certs</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">34</div>
+            <div class="hero-stat-lbl">Skills</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ DYNAMIC SECTIONS ══ -->
+      <div class="content" aria-live="polite">
+        <!-- 00 INTRO -->
+        <section class="section active" id="intro" role="tabpanel">
+          <p class="section-label">00 — Introduction</p>
+          <p class="intro-body">
+            I am a passionate and adaptable Front-End Developer with real-world
+            experience building modern, responsive web applications. I thrive in
+            learning-driven environments and actively seek opportunities to
+            grow.
+          </p>
+          <p class="intro-body">
+            Open to entry-level IT and technical roles — committed to supporting
+            team objectives with dedication, discipline, and a positive
+            attitude.
+          </p>
+          <p class="sub-heading">Core Technologies</p>
+          <div class="skills-wrap">
+            <span class="skill-pill">HTML5</span
+            ><span class="skill-pill">CSS3</span
+            ><span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React.js</span
+            ><span class="skill-pill">Svelte/SvelteKit</span
+            ><span class="skill-pill">Solid-JS</span>
+            <span class="skill-pill">Node.js</span
+            ><span class="skill-pill">Figma</span
+            ><span class="skill-pill">AWS</span>
+            <span class="skill-pill">Terraform</span
+            ><span class="skill-pill">Shell Script</span
+            ><span class="skill-pill">Git</span>
+            <span class="skill-pill">Python</span
+            ><span class="skill-pill">MySQL</span>
+          </div>
+        </section>
+
+        <!-- 01 EDUCATION -->
+        <section class="section" id="education" role="tabpanel">
+          <p class="section-label">01 — Education</p>
+          <div class="glass-card">
+            <div class="exp-role">B.Sc. Computer Science</div>
+            <div class="exp-company">Gitams Degree College, Kadapa</div>
+            <div class="exp-period">
+              Cloud Computing Specialisation &middot; 2024
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="exp-role">Diploma — EEE</div>
+            <div class="exp-company">Govt. Polytechnic College, Rayachoti</div>
+            <div class="exp-period">
+              Electrical &amp; Electronics Engineering &middot; 2021
+            </div>
+          </div>
+          <p class="sub-heading">Certifications</p>
+          <div class="cert-grid">
+            <div class="cert-item">
+              <div class="cert-name">MySQL Essentials</div>
+              <div class="cert-issuer">LetsUpgrade &middot; 2022</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">React JS</div>
+              <div class="cert-issuer">Great Learning &middot; 2023</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">AWS Fundamentals</div>
+              <div class="cert-issuer">Amazon Web Services</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">Terraform Basics</div>
+              <div class="cert-issuer">HashiCorp</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">JavaScript</div>
+              <div class="cert-issuer">Online Cert</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">+9 more</div>
+              <div class="cert-issuer">Various Platforms</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 EXPERIENCE -->
+        <section class="section" id="experience" role="tabpanel">
+          <p class="section-label">02 — Experience</p>
+          <div class="glass-card">
+            <div class="exp-role">Web Developer</div>
+            <div class="exp-company">Freelance</div>
+            <div class="exp-period">
+              Mar 2023 — Present &middot; 3 yrs 2 mos
+            </div>
+            <p class="exp-desc">
+              Building responsive web applications end-to-end — from Figma
+              wireframes to deployment. React.js, modern CSS, and cloud
+              integrations for clients.
+            </p>
+            <div class="tag-row">
+              <span class="tag">React.js</span><span class="tag">Figma</span
+              ><span class="tag">HTML5</span><span class="tag">CSS3</span
+              ><span class="tag">Node.js</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="exp-role">Frontend Developer</div>
+            <div class="exp-company">Atom Cloud &middot; Apprenticeship</div>
+            <div class="exp-period">
+              Oct 2021 — Mar 2023 &middot; 1 yr 6 mos
+            </div>
+            <p class="exp-desc">
+              Built UI components, improved web performance, and collaborated on
+              cloud-integrated projects. Hands-on with SvelteKit, AWS, and
+              Terraform.
+            </p>
+            <div class="tag-row">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span
+              ><span class="tag">SvelteKit</span><span class="tag">AWS</span
+              ><span class="tag">Terraform</span><span class="tag">Git</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 INTERESTS -->
+        <section class="section" id="interests" role="tabpanel">
+          <p class="section-label">03 — Interests</p>
+          <p class="intro-body">
+            Beyond code, I am drawn to visual storytelling, cloud
+            infrastructure, and the intersection of design and technology.
+          </p>
+          <p class="sub-heading">Technical</p>
+          <div class="skills-wrap mb-20">
+            <span class="skill-pill">Cloud Architecture</span
+            ><span class="skill-pill">DevOps</span>
+            <span class="skill-pill">UI/UX Design</span
+            ><span class="skill-pill">Web Performance</span>
+            <span class="skill-pill">Open Source</span
+            ><span class="skill-pill">IaC</span
+            ><span class="skill-pill">Modern CSS</span>
+          </div>
+          <p class="sub-heading">Creative</p>
+          <div class="skills-wrap mb-20">
+            <span class="skill-pill">Videography</span
+            ><span class="skill-pill">Photography</span>
+            <span class="skill-pill">Video Editing</span
+            ><span class="skill-pill">Visual Design</span>
+          </div>
+          <p class="sub-heading">Soft Skills</p>
+          <div class="skills-wrap">
+            <span class="skill-pill">Fast Learner</span
+            ><span class="skill-pill">Adaptability</span>
+            <span class="skill-pill">Problem Solving</span
+            ><span class="skill-pill">Team Work</span
+            ><span class="skill-pill">Discipline</span>
+          </div>
+        </section>
+
+        <!-- 04 PROJECTS -->
+        <section class="section" id="projects" role="tabpanel">
+          <p class="section-label">04 — Projects</p>
+          <div class="glass-card">
+            <div class="proj-title">GitHub Portfolio</div>
+            <p class="proj-desc">
+              Web projects in Svelte, SvelteKit, Solid-JS and React. Landing
+              pages, tools, and cloud-integrated apps.
+            </p>
+            <div class="tag-row mb-14">
+              <span class="tag">Svelte</span><span class="tag">SvelteKit</span
+              ><span class="tag">Solid-JS</span><span class="tag">React</span>
+            </div>
+            <a
+              class="proj-link"
+              href="https://github.com/mujeebshk"
+              target="_blank"
+              rel="noopener"
+              >github.com/mujeebshk &rarr;</a
+            >
+          </div>
+          <div class="glass-card">
+            <div class="proj-title">Responsive Web Apps</div>
+            <p class="proj-desc">
+              Client-facing applications built during freelance tenure.
+              Performance, accessibility, and modern design. AWS-hosted.
+            </p>
+            <div class="tag-row">
+              <span class="tag">React.js</span><span class="tag">CSS3</span
+              ><span class="tag">AWS</span><span class="tag">Figma</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="proj-title">Cloud &amp; DevOps Experiments</div>
+            <p class="proj-desc">
+              AWS infrastructure via Terraform. Shell scripting for automation
+              and deployment pipelines.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Terraform</span><span class="tag">AWS</span
+              ><span class="tag">Shell Script</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05 GOALS -->
+        <section class="section" id="goals" role="tabpanel">
+          <p class="section-label">05 — Goals</p>
+          <div class="goals-list">
+            <div class="goal-item">
+              <div class="goal-num">01</div>
+              <div class="goal-content">
+                <div class="goal-title">Full-Stack Mastery</div>
+                <p class="goal-text">
+                  Strengthen backend skills with Node.js and databases for
+                  full-stack capability.
+                </p>
+              </div>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">02</div>
+              <div class="goal-content">
+                <div class="goal-title">AWS Certification</div>
+                <p class="goal-text">
+                  Achieve AWS Solutions Architect certification to formalise
+                  cloud knowledge.
+                </p>
+              </div>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">03</div>
+              <div class="goal-content">
+                <div class="goal-title">Open Source</div>
+                <p class="goal-text">
+                  Contribute to Svelte and React ecosystems — giving back to the
+                  community.
+                </p>
+              </div>
+            </div>
+            <div class="goal-item">
+              <div class="goal-num">04</div>
+              <div class="goal-content">
+                <div class="goal-title">Build a Product</div>
+                <p class="goal-text">
+                  Launch an independent SaaS product that solves a real problem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 06 CONTACT -->
+        <section class="section" id="contact" role="tabpanel">
+          <p class="section-label">06 — Contact</p>
+          <div class="contact-row">
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-val">Bengaluru, Karnataka, India</div>
+            </div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-val">
+                <a
+                  href="https://github.com/mujeebshk"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/mujeebshk</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-val">
+                <a
+                  href="https://linkedin.com/in/mujeebshaik-in"
+                  target="_blank"
+                  rel="noopener"
+                  >mujeebshaik-in</a
+                >
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactFormMobile" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="mob-name">Your Name</label
+              ><input
+                class="form-input"
+                type="text"
+                id="mob-name"
+                name="name"
+                placeholder="Full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mob-email">Email</label
+              ><input
+                class="form-input"
+                type="email"
+                id="mob-email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mob-message">Message</label
+              ><textarea
+                class="form-input"
+                id="mob-message"
+                name="message"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            <button class="btn-send" type="submit">Send Message</button>
+            <p class="form-status" id="formStatusMobile" aria-live="polite"></p>
+          </form>
+          <footer class="footer-text">
+            &copy; 2026 Mujeeb Shaik. All rights reserved.<br />
+            Designed &amp; built with passion &middot; Bengaluru, India<br />
+            Open to Frontend, Web Developer &amp; DevOps roles.
+          </footer>
+        </section>
+      </div>
+    </div>
+
+    <script src="assets/js/mobile.js"></script>
+  </body>
+</html>

@@ -3,43 +3,43 @@
  * Handles: hamburger menu toggle, section switching, contact form
  */
 
-'use strict';
+"use strict";
 
 /* ── DOM references ── */
-const menuBtn        = document.getElementById('menuBtn');
-const drawer         = document.getElementById('drawer');
-const drawerButtons  = document.querySelectorAll('.drawer-nav [data-section]');
-const sections       = document.querySelectorAll('.section');
-const hero           = document.querySelector('.hero');
-const contactForm    = document.getElementById('contactFormMobile');
-const formStatus     = document.getElementById('formStatusMobile');
+const menuBtn = document.getElementById("menuBtn");
+const drawer = document.getElementById("drawer");
+const drawerButtons = document.querySelectorAll(".drawer-nav [data-section]");
+const sections = document.querySelectorAll(".section");
+const hero = document.querySelector(".hero");
+const contactForm = document.getElementById("contactFormMobile");
+const formStatus = document.getElementById("formStatusMobile");
 
 /* ══════════════════════════════════
    HAMBURGER MENU
 ══════════════════════════════════ */
 function openMenu() {
-  menuBtn.setAttribute('aria-expanded', 'true');
-  drawer.classList.add('open');
-  drawer.removeAttribute('aria-hidden');
+  menuBtn.setAttribute("aria-expanded", "true");
+  drawer.classList.add("open");
+  drawer.removeAttribute("aria-hidden");
 }
 
 function closeMenu() {
-  menuBtn.setAttribute('aria-expanded', 'false');
-  drawer.classList.remove('open');
-  drawer.setAttribute('aria-hidden', 'true');
+  menuBtn.setAttribute("aria-expanded", "false");
+  drawer.classList.remove("open");
+  drawer.setAttribute("aria-hidden", "true");
 }
 
 function toggleMenu() {
-  const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+  const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
   isOpen ? closeMenu() : openMenu();
 }
 
-menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener("click", toggleMenu);
 
 /* Close drawer on outside tap */
-document.addEventListener('click', (e) => {
+document.addEventListener("click", (e) => {
   if (
-    drawer.classList.contains('open') &&
+    drawer.classList.contains("open") &&
     !drawer.contains(e.target) &&
     !menuBtn.contains(e.target)
   ) {
@@ -48,8 +48,8 @@ document.addEventListener('click', (e) => {
 });
 
 /* Close on Escape key */
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && drawer.classList.contains('open')) closeMenu();
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && drawer.classList.contains("open")) closeMenu();
 });
 
 /* ══════════════════════════════════
@@ -63,25 +63,27 @@ document.addEventListener('keydown', (e) => {
  */
 function showSection(sectionId, activeBtn) {
   sections.forEach((sec) => {
-    sec.classList.remove('active');
-    sec.setAttribute('aria-hidden', 'true');
+    sec.classList.remove("active");
+    sec.setAttribute("aria-hidden", "true");
   });
 
   drawerButtons.forEach((btn) => {
-    btn.classList.remove('active');
-    btn.setAttribute('aria-selected', 'false');
+    btn.classList.remove("active");
+    btn.setAttribute("aria-selected", "false");
   });
 
   const target = document.getElementById(sectionId);
   if (target) {
-    target.classList.add('active');
-    target.removeAttribute('aria-hidden');
+    target.classList.add("active");
+    target.removeAttribute("aria-hidden");
   }
 
-  const btn = activeBtn || document.querySelector(`.drawer-nav [data-section="${sectionId}"]`);
+  const btn =
+    activeBtn ||
+    document.querySelector(`.drawer-nav [data-section="${sectionId}"]`);
   if (btn) {
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
+    btn.classList.add("active");
+    btn.setAttribute("aria-selected", "true");
   }
 
   closeMenu();
@@ -89,23 +91,23 @@ function showSection(sectionId, activeBtn) {
   /* Scroll to just below the hero */
   if (hero) {
     const scrollTarget = hero.offsetHeight + 56;
-    window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+    window.scrollTo({ top: scrollTarget, behavior: "smooth" });
   }
 
   /* Update URL hash */
-  history.replaceState(null, '', `#${sectionId}`);
+  history.replaceState(null, "", `#${sectionId}`);
 }
 
 /* Bind drawer button clicks */
 drawerButtons.forEach((btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     showSection(btn.dataset.section, btn);
   });
 });
 
 /* Support direct hash navigation on load */
 function loadFromHash() {
-  const hash = window.location.hash.replace('#', '');
+  const hash = window.location.hash.replace("#", "");
   const validSections = Array.from(sections).map((s) => s.id);
   if (hash && validSections.includes(hash)) {
     showSection(hash);
@@ -116,41 +118,55 @@ function loadFromHash() {
    CONTACT FORM
 ══════════════════════════════════ */
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    formStatus.textContent = '';
-    formStatus.className   = 'form-status';
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
 
-    const name    = contactForm.name.value.trim();
-    const email   = contactForm.email.value.trim();
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
     const message = contactForm.message.value.trim();
 
     if (!name || !email || !message) {
-      formStatus.textContent = 'Please fill in all fields.';
-      formStatus.classList.add('error');
+      formStatus.textContent = "Please fill in all fields.";
+      formStatus.classList.add("error");
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      formStatus.textContent = 'Please enter a valid email address.';
-      formStatus.classList.add('error');
+      formStatus.textContent = "Please enter a valid email address.";
+      formStatus.classList.add("error");
       return;
     }
 
-    /*
-     * Replace with your real form submission handler.
-     * See main.js for a Formspree example.
-     */
+    // Formspree Integration
+    formStatus.textContent = "Sending...";
 
-    formStatus.textContent = 'Message sent! I will get back to you soon.';
-    formStatus.classList.add('success');
-    contactForm.reset();
+    fetch("https://formspree.io/f/mlgaazdv", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: `New Message from ${name} (Mobile View)`,
+      }),
+    })
+      .then(() => {
+        formStatus.textContent = "Message sent!";
+        formStatus.classList.add("success");
+        contactForm.reset();
+      })
+      .catch(() => {
+        formStatus.textContent = "Something went wrong. Please try again.";
+        formStatus.classList.add("error");
+      });
   });
 }
 
 /* ══════════════════════════════════
    INIT
 ══════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   loadFromHash();
 });

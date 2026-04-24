@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="canonical" href="https://mujeebshk.github.io/Digi_Portfolio/" />
+    <meta
+      name="description"
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer portfolio. Specialist in React, TypeScript, and enterprise CRM solutions. Building scalable web applications and dashboards in Bengaluru, India."
+    />
+    <meta
+      name="keywords"
+      content="Mujeeb, Shaik Mujeeb, mujeebshk, Software Engineer, React, TypeScript, Veeva CRM, Salesforce, MyInsights, Bengaluru"
+    />
+    <meta name="author" content="Shaik Mujeeb" />
+    <meta name="theme-color" content="#080808" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Software Engineer building scalable web applications and enterprise dashboards. Explore the portfolio of Shaik Mujeeb (mujeebshk)."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mujeebshk.github.io/Digi_Portfolio/"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Software Engineer portfolio of Shaik Mujeeb (mujeebshk). Focused on modern web technologies and enterprise dashboards."
+    />
+
+    <title>Shaik Mujeeb (mujeebshk) — Software Engineer</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shaik Mujeeb",
+        "alternateName": "mujeebshk",
+        "url": "https://mujeebshk.github.io/Digi_Portfolio/",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+          "https://github.com/mujeebshk",
+          "https://linkedin.com/in/mujeebshaik-in",
+          "https://www.instagram.com/YOUR_INSTAGRAM_HANDLE"
+        ]
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/resume-modal.css" />
+
+    <!-- PDF.js Library (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  </head>
+  <body>
+    <header class="topbar" role="banner" aria-label="Site header">
+      <div class="topbar-logo"><em>S.</em>Mujeeb</div>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <nav
+      class="mobile-drawer"
+      id="mobileDrawer"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <ul class="mobile-nav-list" role="tablist">
+        <li>
+          <button
+            role="tab"
+            aria-selected="true"
+            data-section="intro"
+            class="active"
+          >
+            Intro <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="education">
+            Education <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="experience">
+            Experience <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="interests">
+            Interests <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="projects">
+            Projects <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="goals">
+            Goals <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button role="tab" aria-selected="false" data-section="contact">
+            Contact <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="mobile-hero" aria-label="Introduction hero">
+      <p class="hero-tag">Portfolio · 2026</p>
+      <div class="hero-name"><em>Shaik</em></div>
+      <div class="hero-name-last">Mujeeb</div>
+      <span class="hero-badge"
+        ><span class="hero-dot" aria-hidden="true"></span>Open to Work</span
+      >
+      <p class="hero-desc">
+        Software Engineer based in Bengaluru. Building scalable web
+        applications, enterprise dashboards, and CRM-integrated solutions.
+      </p>
+      <div class="hero-stats" aria-label="Quick stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-lbl">Years</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14</div>
+          <div class="hero-stat-lbl">Certs</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">34</div>
+          <div class="hero-stat-lbl">Skills</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="app" id="app">
+      <aside class="left-panel" aria-label="Introduction panel">
+        <div class="intro-block">
+          <p class="tag-line">Software Engineer · Bengaluru</p>
+          <div class="name-first">Shaik</div>
+          <div class="name-last">Mujeeb</div>
+          <div class="title-row">
+            <span class="title-badge">Software Engineer</span>
+            <span class="avail-dot">Open to work</span>
+          </div>
+          <p class="intro-desc">
+            Software Engineer with hands-on experience building responsive,
+            user-focused applications for enterprise and analytics environments.
+            Strong in JavaScript, TypeScript, React, API integration, and
+            reusable UI architecture across CRM and dashboard platforms.
+          </p>
+          <div class="stats-row" aria-label="Key statistics">
+            <div class="stat-item">
+              <div class="stat-num">3+</div>
+              <div class="stat-lbl">Years</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">14</div>
+              <div class="stat-lbl">Certs</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">34</div>
+              <div class="stat-lbl">Skills</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Desktop navigation">
+          <ul class="desktop-nav-list" role="tablist">
+            <li>
+              <button
+                role="tab"
+                aria-selected="true"
+                data-section="intro"
+                class="active"
+              >
+                Intro
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" data-section="education">
+                Education
+              </button>
+            </li>
+            <li>
+              <button
+                role="tab"
+                aria-selected="false"
+                data-section="experience"
+              >
+                Experience
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" data-section="interests">
+                Interests
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" data-section="projects">
+                Projects
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" data-section="goals">
+                Goals
+              </button>
+            </li>
+            <li>
+              <button role="tab" aria-selected="false" data-section="contact">
+                Contact
+              </button>
+            </li>
+          </ul>
+          <div class="left-footer">
+            &copy; 2026 Shaik Mujeeb &middot; Bengaluru, India<br />
+            <a
+              href="https://github.com/mujeebshk"
+              target="_blank"
+              rel="noopener"
+              >github.com/mujeebshk</a
+            >
+            &nbsp;&middot;&nbsp;
+            <a
+              href="https://linkedin.com/in/mujeebshaik-in"
+              target="_blank"
+              rel="noopener"
+              >linkedin/mujeebshaik-in</a
+            >
+          </div>
+        </nav>
+      </aside>
+
+      <main class="right-panel" id="rightPanel" aria-live="polite">
+        <section
+          class="section active"
+          id="intro"
+          role="tabpanel"
+          aria-labelledby="nav-intro"
+        >
+          <p class="section-label">00 — Introduction</p>
+          <div class="glass-card">
+            <h1 class="intro-headline">
+              Building<br /><em>software systems</em><br />that deliver.
+            </h1>
+            <p class="body-text">
+              Software Engineer with production experience delivering
+              dashboard-driven products using React, Veeva MyInsights, and
+              Salesforce. Skilled in translating business requirements into
+              maintainable, data-driven interfaces with measurable impact.
+            </p>
+          </div>
+          <p class="sub-heading">Core Technologies</p>
+          <div class="skills-wrap">
+            <span class="skill-tag">JavaScript</span
+            ><span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React.js</span
+            ><span class="skill-tag">Svelte</span>
+            <span class="skill-tag">HTML5</span
+            ><span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Python</span
+            ><span class="skill-tag">SQL</span>
+            <span class="skill-tag">Veeva CRM</span
+            ><span class="skill-tag">Veeva MyInsights</span>
+            <span class="skill-tag">Salesforce Dashboards</span
+            ><span class="skill-tag">SOQL</span>
+            <span class="skill-tag">REST API Integration</span
+            ><span class="skill-tag">Dashboard Engineering</span>
+            <span class="skill-tag">Git</span
+            ><span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Linux</span
+            ><span class="skill-tag">AWS</span>
+          </div>
+        </section>
+
+        <!-- ... Rest of the sections (Education, Experience, etc.) ... -->
+
+        <section class="section" id="contact" role="tabpanel">
+          <p class="section-label">06 — Contact</p>
+          <div class="contact-info-grid">
+            <div class="contact-info-item">
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-val">Bengaluru, Karnataka, India</div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">GitHub</div>
+              <div class="contact-info-val">
+                <a
+                  href="https://github.com/mujeebshk"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/mujeebshk</a
+                >
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-label">LinkedIn</div>
+              <div class="contact-info-val">
+                <a
+                  href="https://linkedin.com/in/mujeebshaik-in"
+                  target="_blank"
+                  rel="noopener"
+                  >mujeebshaik-in</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="resume-btn"
+            id="resumeViewBtn"
+            aria-label="View and download resume"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            View Resume
+          </button>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="inp-name">Your Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="inp-name"
+                name="name"
+                placeholder="Full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="inp-email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-message">Message</label>
+              <textarea
+                class="form-input"
+                id="inp-message"
+                name="message"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+            <button class="btn-send" type="submit">Send Message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div
+      class="resume-modal"
+      id="resumeModal"
+      role="dialog"
+      aria-labelledby="resumeModalTitle"
+      aria-hidden="true"
+    >
+      <div class="resume-modal-content">
+        <div class="resume-modal-header">
+          <h2 class="resume-modal-title" id="resumeModalTitle">Resume</h2>
+          <div class="resume-modal-controls">
+            <button
+              class="resume-modal-btn"
+              id="resumeDownloadBtn"
+              title="Download Resume"
+              aria-label="Download resume as PDF"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download
+            </button>
+            <button
+              class="resume-modal-close"
+              id="resumeCloseBtn"
+              aria-label="Close resume viewer"
+              title="Close"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div class="resume-pdf-container">
+          <div class="resume-loader" id="resumeLoader">
+            <div class="spinner"></div>
+          </div>
+          <canvas id="resumePdfCanvas"></canvas>
+        </div>
+        <div class="resume-page-nav">
+          <button
+            class="resume-modal-btn"
+            id="resumePrevBtn"
+            aria-label="Previous page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <span>
+            Page
+            <input
+              type="number"
+              class="resume-page-input"
+              id="resumePageInput"
+              min="1"
+              value="1"
+              aria-label="Current page number"
+            />
+            of <span id="resumeTotalPages">0</span>
+          </span>
+          <button
+            class="resume-modal-btn"
+            id="resumeNextBtn"
+            aria-label="Next page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/resume-viewer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+/* ═══════════════════════════════════════════════════════════════
+   RESUME MODAL VIEWER STYLES
+   Matches portfolio glass morphism + dark theme aesthetic
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Eye Icon Button */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    margin-top: 1.5rem;
+}
+
+.resume-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+.resume-btn:active {
+    transform: translateY(0);
+}
+
+.resume-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke-width: 2;
+    transition: transform 0.3s ease;
+}
+
+.resume-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Modal Overlay */
+.resume-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.resume-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.resume-modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+    height: 90vh;
+    margin: auto;
+    background: rgba(20, 20, 25, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Header */
+.resume-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.resume-modal-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-family: "Syne", sans-serif;
+}
+
+.resume-modal-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Modal Buttons */
+.resume-modal-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.resume-modal-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.resume-modal-btn svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2;
+}
+
+/* Close Button */
+.resume-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.resume-modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* PDF Viewer Container */
+.resume-pdf-container {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.resume-pdf-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.resume-pdf-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.resume-pdf-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.resume-pdf-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#resumePdfCanvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Loading Spinner */
+.resume-loader {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resume-loader.active {
+    display: flex;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page Navigation */
+.resume-page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.resume-page-input {
+    width: 50px;
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: inherit;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.resume-page-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-modal-content {
+        width: 95%;
+        height: 95vh;
+        border-radius: 12px;
+    }
+
+    .resume-modal-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .resume-modal-title {
+        font-size: 1.1rem;
+    }
+
+    .resume-modal-controls {
+        gap: 0.5rem;
+    }
+
+    .resume-modal-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .resume-pdf-container {
+        padding: 1rem;
+    }
+
+    .resume-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1.2rem;
+    }
+}
+
+/* Accessibility */
+.resume-btn:focus-visible,
+.resume-modal-btn:focus-visible,
+.resume-modal-close:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}

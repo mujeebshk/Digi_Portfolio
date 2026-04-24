@@ -1,4 +1,4 @@
-# Mujeeb Shaik — Portfolio
+# Shaik Mujeeb — Portfolio
 
 Personal portfolio website. Fully responsive — automatically switches between desktop and mobile layout based on screen width. **One file, one URL, works everywhere.**
 
@@ -116,4 +116,4 @@ fetch("https://formspree.io/f/YOUR_FORM_ID", {
 
 ---
 
-© 2026 Mujeeb Shaik. All rights reserved.
+© 2026 Shaik Mujeeb. All rights reserved.

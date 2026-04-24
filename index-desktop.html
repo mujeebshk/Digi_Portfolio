@@ -9,28 +9,28 @@
     <link rel="canonical" href="https://mujeebshk.github.io/Digi_Portfolio/" />
     <meta
       name="description"
-      content="Mujeeb Shaik — Software Engineer portfolio. Building scalable web applications, analytics dashboards, and CRM solutions. Based in Bengaluru, India."
-      content="Mujeeb Shaik (mujeebshk) — Software Engineer portfolio. Specialist in React, TypeScript, and enterprise CRM solutions. Based in Bengaluru, India."
+      content="Shaik Mujeeb — Software Engineer portfolio. Building scalable web applications, analytics dashboards, and CRM solutions. Based in Bengaluru, India."
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer portfolio. Specialist in React, TypeScript, and enterprise CRM solutions. Based in Bengaluru, India."
     />
     <meta
       name="keywords"
-      content="Mujeeb Shaik, Software Engineer, React, TypeScript, Veeva CRM, Salesforce, MyInsights, Bengaluru"
-      content="Mujeeb, Mujeeb Shaik, mujeebshk, Software Engineer, React, TypeScript, Veeva CRM, Salesforce, MyInsights, Bengaluru"
+      content="Shaik Mujeeb, Software Engineer, React, TypeScript, Veeva CRM, Salesforce, MyInsights, Bengaluru"
+      content="Mujeeb, Shaik Mujeeb, mujeebshk, Software Engineer, React, TypeScript, Veeva CRM, Salesforce, MyInsights, Bengaluru"
     />
-    <meta name="author" content="Mujeeb Shaik" />
+    <meta name="author" content="Shaik Mujeeb" />
     <meta name="theme-color" content="#080808" />
 
     <meta name="robots" content="index, follow" />
     <!-- Open Graph -->
-    <meta property="og:title" content="Mujeeb Shaik — Software Engineer" />
+    <meta property="og:title" content="Shaik Mujeeb — Software Engineer" />
     <meta
       property="og:title"
-      content="Mujeeb Shaik (mujeebshk) — Software Engineer"
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer"
     />
     <meta
       property="og:description"
       content="Building production-grade dashboards, data-driven apps, and scalable frontend systems for enterprise use."
-      content="Software Engineer building scalable web applications and enterprise dashboards. Explore the portfolio of Mujeeb Shaik (mujeebshk)."
+      content="Software Engineer building scalable web applications and enterprise dashboards. Explore the portfolio of Shaik Mujeeb (mujeebshk)."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -44,25 +44,25 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Mujeeb Shaik — Software Engineer" />
+    <meta name="twitter:title" content="Shaik Mujeeb — Software Engineer" />
     <meta
       name="twitter:title"
-      content="Mujeeb Shaik (mujeebshk) — Software Engineer"
+      content="Shaik Mujeeb (mujeebshk) — Software Engineer"
     />
     <meta
       name="twitter:description"
       content="Software Engineer building modern applications, enterprise dashboards, and CRM-integrated solutions."
-      content="Software Engineer portfolio of Mujeeb Shaik (mujeebshk). Focused on modern web technologies."
+      content="Software Engineer portfolio of Shaik Mujeeb (mujeebshk). Focused on modern web technologies."
     />
 
-    <title>Mujeeb Shaik — Software Engineer</title>
-    <title>Mujeeb Shaik (mujeebshk) — Software Engineer</title>
+    <title>Shaik Mujeeb — Software Engineer</title>
+    <title>Shaik Mujeeb (mujeebshk) — Software Engineer</title>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Mujeeb Shaik",
+        "name": "Shaik Mujeeb",
         "alternateName": "mujeebshk",
         "url": "https://mujeebshk.github.io/Digi_Portfolio/",
         "jobTitle": "Software Engineer",
@@ -85,15 +85,19 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/resume-modal.css" />
+
+    <!-- PDF.js Library (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   </head>
   <body>
     <!--
-    ╔══════════════════════════════════════════════════╗
-    ║  MOBILE TOPBAR  (hidden on desktop via CSS)      ║
-    ╚══════════════════════════════════════════════════╝
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  MOBILE TOPBAR  (hidden on desktop via CSS)                  ║
+    ╚══════════════════════════════════════════════════════════════╝
   -->
     <header class="topbar" role="banner" aria-label="Site header">
-      <div class="topbar-logo"><em>M.</em>Shaik</div>
+      <div class="topbar-logo"><em>S.</em>Mujeeb</div>
       <button
         class="menu-btn"
         id="menuBtn"
@@ -106,9 +110,9 @@
     </header>
 
     <!--
-    ╔══════════════════════════════════════════════════╗
-    ║  MOBILE DRAWER  (hidden on desktop via CSS)      ║
-    ╚══════════════════════════════════════════════════╝
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  MOBILE DRAWER  (hidden on desktop via CSS)                  ║
+    ╚══════════════════════════════════════════════════════════════╝
   -->
     <nav
       class="mobile-drawer"
@@ -161,14 +165,14 @@
     </nav>
 
     <!--
-    ╔══════════════════════════════════════════════════╗
-    ║  MOBILE HERO  (hidden on desktop via CSS)        ║
-    ╚══════════════════════════════════════════════════╝
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  MOBILE HERO  (hidden on desktop via CSS)                    ║
+    ╚══════════════════════════════════════════════════════════════╝
   -->
     <section class="mobile-hero" aria-label="Introduction hero">
       <p class="hero-tag">Portfolio · 2026</p>
-      <div class="hero-name"><em>Mujeeb</em></div>
-      <div class="hero-name-last">Shaik</div>
+      <div class="hero-name"><em>Shaik</em></div>
+      <div class="hero-name-last">Mujeeb</div>
       <span class="hero-badge"
         ><span class="hero-dot" aria-hidden="true"></span>Open to Work</span
       >
@@ -193,9 +197,9 @@
     </section>
 
     <!--
-    ╔══════════════════════════════════════════════════╗
-    ║  APP WRAPPER — desktop 2:1 grid container        ║
-    ╚══════════════════════════════════════════════════╝
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  APP WRAPPER — desktop 2:1 grid container                    ║
+    ╚══════════════════════════════════════════════════════════════╝
   -->
     <div class="app" id="app">
       <!--
@@ -206,8 +210,8 @@
       <aside class="left-panel" aria-label="Introduction panel">
         <div class="intro-block">
           <p class="tag-line">Software Engineer · Bengaluru</p>
-          <div class="name-first">Mujeeb</div>
-          <div class="name-last">Shaik</div>
+          <div class="name-first">Shaik</div>
+          <div class="name-last">Mujeeb</div>
           <div class="title-row">
             <span class="title-badge">Software Engineer</span>
             <span class="avail-dot">Open to work</span>
@@ -282,7 +286,7 @@
             </li>
           </ul>
           <div class="left-footer">
-            &copy; 2026 Mujeeb Shaik &middot; Bengaluru, India<br />
+            &copy; 2026 Shaik Mujeeb &middot; Bengaluru, India<br />
             <a
               href="https://github.com/mujeebshk"
               target="_blank"
@@ -662,6 +666,26 @@
               </div>
             </div>
           </div>
+
+          <!-- Resume Button -->
+          <button
+            class="resume-btn"
+            id="resumeViewBtn"
+            aria-label="View and download resume"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            View Resume
+          </button>
+
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
               <label class="form-label" for="inp-name">Your Name</label>
@@ -699,7 +723,7 @@
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
           <footer class="section-footer">
-            &copy; 2026 Mujeeb Shaik. All rights reserved.<br />
+            &copy; 2026 Shaik Mujeeb. All rights reserved.<br />
             Designed &amp; built with passion &middot; Bengaluru, India<br />
             Open to Software Engineer, Frontend Engineer, and Product
             Engineering roles.
@@ -709,6 +733,107 @@
     </div>
     <!-- /.app -->
 
+    <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  RESUME PDF MODAL VIEWER                                     ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+    <div
+      class="resume-modal"
+      id="resumeModal"
+      role="dialog"
+      aria-labelledby="resumeModalTitle"
+      aria-hidden="true"
+    >
+      <div class="resume-modal-content">
+        <!-- Modal Header -->
+        <div class="resume-modal-header">
+          <h2 class="resume-modal-title" id="resumeModalTitle">Resume</h2>
+          <div class="resume-modal-controls">
+            <button
+              class="resume-modal-btn"
+              id="resumeDownloadBtn"
+              title="Download Resume"
+              aria-label="Download resume as PDF"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download
+            </button>
+            <button
+              class="resume-modal-close"
+              id="resumeCloseBtn"
+              aria-label="Close resume viewer"
+              title="Close"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- PDF Canvas -->
+        <div class="resume-pdf-container">
+          <div class="resume-loader" id="resumeLoader">
+            <div class="spinner"></div>
+          </div>
+          <canvas id="resumePdfCanvas"></canvas>
+        </div>
+
+        <!-- Page Navigation -->
+        <div class="resume-page-nav">
+          <button
+            class="resume-modal-btn"
+            id="resumePrevBtn"
+            aria-label="Previous page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <span>
+            Page
+            <input
+              type="number"
+              class="resume-page-input"
+              id="resumePageInput"
+              min="1"
+              value="1"
+              aria-label="Current page number"
+            />
+            of <span id="resumeTotalPages">0</span>
+          </span>
+          <button
+            class="resume-modal-btn"
+            id="resumeNextBtn"
+            aria-label="Next page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/resume-viewer.js"></script>
   </body>
 </html>

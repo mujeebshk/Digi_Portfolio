@@ -18,8 +18,12 @@ mujeeb-portfolio/
     │   └── layout.css  # Responsive layout via CSS media queries
     │                     > 768px  →  Desktop 2:1 grid
     │                     ≤ 768px  →  Mobile hero + drawer
-    └── js/
-        └── app.js      # Unified JS: section switching, hamburger, form
+    ├── js/
+    │   ├── app.js              # Unified JS: section switching, hamburger, form
+    │   └── resume-viewer.js    # Browser PDF modal controller
+    └── py/
+        ├── app.py              # Python companion for app.js + local server
+        └── resume_viewer.py    # Python companion for resume-viewer.js
 ```
 
 ---
@@ -53,6 +57,28 @@ python3 -m http.server 3000
 npx http-server . -p 3000
 
 # VS Code: right-click index.html → "Open with Live Server"
+```
+
+Python companions:
+
+```bash
+# Serve the portfolio with Python
+python3 assets/py/app.py serve --port 3000
+
+# Inspect navigation state
+python3 assets/py/app.py state projects
+
+# Validate contact form data
+python3 assets/py/app.py validate-contact \
+  --name "Shaik Mujeeb" \
+  --email "mujeeb@example.com" \
+  --message "Hello"
+
+# Inspect resume PDF state
+python3 assets/py/resume_viewer.py info
+
+# Copy resume using the same download filename as the JS viewer
+python3 assets/py/resume_viewer.py download --to .
 ```
 
 ---

@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mLogoTitle mLogoDesc">
+  <title id="mLogoTitle">M monogram logo</title>
+  <desc id="mLogoDesc">A refined Cinzel-inspired M monogram for Shaik Mujeeb.</desc>
+  <style>
+    .m-mark {
+      font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+      font-size: 96px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+  </style>
+  <text class="m-mark" x="64" y="93" text-anchor="middle" fill="#F5F5F0">M</text>
+  <path d="M38 103H90" stroke="#4ADE80" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 24H84" stroke="#F5F5F0" stroke-opacity="0.18" stroke-width="2" stroke-linecap="round"/>
+</svg>

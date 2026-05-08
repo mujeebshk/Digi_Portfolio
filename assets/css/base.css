@@ -21,6 +21,7 @@
   --gray-400:    #888884;
   --gray-600:    #444440;
   --gray-800:    #1c1c1a;
+  --brand-green: #4ade80;
 
   --glass-bg:     rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.09);
@@ -60,6 +61,34 @@ a {
 a:hover { color: var(--white); }
 
 button { cursor: pointer; font-family: var(--font-sans); }
+
+/* ── Brand logo ── */
+.brand-mark {
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  padding: 0;
+}
+
+.brand-mark--sm {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+}
+
+.brand-lockup:hover {
+  color: var(--white);
+}
 
 /* ── NOISE TEXTURE ── */
 body::before {

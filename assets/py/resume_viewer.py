@@ -13,7 +13,7 @@ from pathlib import Path
 import argparse
 import re
 import shutil
-from typing import Iterable
+from typing import Sequence
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -105,7 +105,7 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main(argv: Iterable[str] | None = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     viewer = ResumeViewer(pdf_path=Path(args.pdf))
